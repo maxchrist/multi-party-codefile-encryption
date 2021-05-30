@@ -1,5 +1,5 @@
 # multi-party-codefile-encryption
-This is the final project for Modern Cryptography at NYU Tandon. The code provides an encryption method to work collaboratively on a coding project on a website such as Github, but retain full control over their security and privacy. The method prevents adversaries, including the file hosting site, from accessing the encrypted contents of posted files. In order to work on a Github project collaboratively, one person will be the administrator or admin, and be responsible for getting all users to use the same (private) symmetric encryption key. The set up is broken into steps for the admin and the user, which can be found below. 
+This is the final project for the Modern Cryptography class at NYU Tandon, Fall 2020. The code provides an encryption method to work collaboratively on a coding project on a website such as Github, but retain full control over their security and privacy. The method prevents adversaries, including the file hosting site, from accessing the encrypted contents of posted files. In order to work on a Github project collaboratively, one person will be the administrator or admin, and be responsible for getting all users to use the same (private) symmetric encryption key. The set up is broken into steps for the admin and the user, which can be found below. 
 
 # Requirements
 ``` 
@@ -8,7 +8,9 @@ $ pip install cryptography
 
 # ADMIN SETUP:
 1. Administrator should always start by running admin_main.py from the terminal using the following command:
+```
 python3 admin_main.py
+```
 2. Select the first option in the main menu, which is to generate a symmetric key and public/private signature scheme keys. 
 3. Post the public signature scheme key file to the GitHub repository for all users to see. 
 4. Keep the private signature scheme key and symmetric key in a safe place, and do not distribute it. 
@@ -20,7 +22,9 @@ python3 admin_main.py
 
 # USER SETUP:
 1. User should always start by running user_main.py from the terminal using the following command:
+```
 python3 user_main.py
+```
 2. Select the first option in the main menu, which is to generate new asymmetric keys. 
 3. Post the resulting public asymmetric key file to the GitHub repository, so that the admin can use it to encrypt the symmetric key and send it back to you. 
 4. When the Admin has posted the encrypted symmetric key file to the Github repository, download this file and move it into your current working directory. 
